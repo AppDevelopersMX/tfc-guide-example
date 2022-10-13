@@ -25,6 +25,7 @@ resource "aws_instance" "ubuntu" {
 
   user_data = <<-EOF
   #!/bin/bash
+  echo "TESTING"
   echo "*** Installing apache2"
   sudo apt update -y
   sudo apt install apache2 -y
