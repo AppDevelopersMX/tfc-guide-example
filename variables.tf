@@ -15,7 +15,7 @@ variable "instance_name" {
 
 
 
-variable "creds" {}
-variable "instance_key" {}
-variable "vpc_cidr" {}
-variable "public_subnet_cidr" {}
+#variable "creds" {}
+#variable "instance_key" {}
+#variable "vpc_cidr" {}
+#variable "public_subnet_cidr" {}
