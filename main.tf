@@ -22,6 +22,10 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "ubuntu" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
+  security_groups = ["sg-0f8b060bcd5275ecd"]
+
+  
+  
 
   user_data = <<-EOF
   #!/bin/bash
