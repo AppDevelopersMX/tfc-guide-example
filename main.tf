@@ -19,14 +19,12 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
+
+
 resource "aws_instance" "ubuntu" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
   security_groups = [aws_security_group.sg.id]
-
-
-  
-  
 
   user_data = <<-EOF
   #!/bin/bash
@@ -40,4 +38,5 @@ resource "aws_instance" "ubuntu" {
   tags = {
     Name = var.instance_name
   }
+  
 }
